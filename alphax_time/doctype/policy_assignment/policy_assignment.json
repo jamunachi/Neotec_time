@@ -1,0 +1,77 @@
+{
+  "actions": [],
+  "allow_copy": 0,
+  "allow_events_in_timeline": 0,
+  "allow_import": 1,
+  "autoname": "hash",
+  "creation": "2025-10-23 13:01:35.703279",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "subject_type",
+    "subject",
+    "country_policy_pack",
+    "time_model"
+  ],
+  "fields": [
+    {
+      "fieldname": "subject_type",
+      "label": "Subject Type",
+      "fieldtype": "Select",
+      "options": "Employee\nDepartment\nLocation\nBranch\nCompany\nShift Type"
+    },
+    {
+      "fieldname": "subject",
+      "label": "Subject",
+      "fieldtype": "Dynamic Link",
+      "options": "subject_type"
+    },
+    {
+      "fieldname": "country_policy_pack",
+      "label": "Country Policy Pack",
+      "fieldtype": "Link",
+      "options": "Country Policy Pack",
+      "reqd": 1
+    },
+    {
+      "fieldname": "time_model",
+      "label": "Time Model",
+      "fieldtype": "Link",
+      "options": "Time Model",
+      "reqd": 1
+    }
+  ],
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "max_attachments": 0,
+  "modified": "2025-10-23 13:01:35.703299",
+  "module": "AlphaX Time",
+  "name": "Policy Assignment",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "HR Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Employee",
+      "read": 1
+    }
+  ],
+  "quick_entry": 1,
+  "read_only": 0,
+  "read_only_onload": 0,
+  "track_changes": 1
+}

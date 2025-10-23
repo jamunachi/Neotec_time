@@ -1,0 +1,104 @@
+{
+  "actions": [],
+  "allow_copy": 0,
+  "allow_events_in_timeline": 0,
+  "allow_import": 1,
+  "autoname": "hash",
+  "creation": "2025-10-23 13:01:35.707344",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "employee",
+    "date",
+    "expected_minutes",
+    "worked_minutes",
+    "paid_minutes",
+    "break_minutes",
+    "shortfall_minutes",
+    "ot_minutes",
+    "json_trace"
+  ],
+  "fields": [
+    {
+      "fieldname": "employee",
+      "label": "Employee",
+      "fieldtype": "Link",
+      "options": "Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "date",
+      "label": "Date",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "expected_minutes",
+      "label": "Expected Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "worked_minutes",
+      "label": "Worked Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "paid_minutes",
+      "label": "Paid Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "break_minutes",
+      "label": "Break Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "shortfall_minutes",
+      "label": "Shortfall Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "ot_minutes",
+      "label": "Overtime Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "json_trace",
+      "label": "Computation Trace",
+      "fieldtype": "Long Text"
+    }
+  ],
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "max_attachments": 0,
+  "modified": "2025-10-23 13:01:35.707377",
+  "module": "AlphaX Time",
+  "name": "Daily Flextime Status",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "HR Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Employee",
+      "read": 1
+    }
+  ],
+  "quick_entry": 1,
+  "read_only": 0,
+  "read_only_onload": 0,
+  "track_changes": 1
+}

@@ -1,0 +1,66 @@
+{
+  "actions": [],
+  "allow_copy": 0,
+  "allow_events_in_timeline": 0,
+  "allow_import": 1,
+  "autoname": "field:location_name",
+  "creation": "2025-10-23 13:01:35.712572",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "location_name",
+    "geofence",
+    "wifi_ssids"
+  ],
+  "fields": [
+    {
+      "fieldname": "location_name",
+      "label": "Location Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "geofence",
+      "label": "Geofence (GeoJSON)",
+      "fieldtype": "Long Text"
+    },
+    {
+      "fieldname": "wifi_ssids",
+      "label": "WiFi SSIDs (CSV)",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "max_attachments": 0,
+  "modified": "2025-10-23 13:01:35.712585",
+  "module": "AlphaX Time",
+  "name": "Location Site",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "HR Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Employee",
+      "read": 1
+    }
+  ],
+  "quick_entry": 1,
+  "read_only": 0,
+  "read_only_onload": 0,
+  "track_changes": 1
+}

@@ -1,0 +1,108 @@
+{
+  "actions": [],
+  "allow_copy": 0,
+  "allow_events_in_timeline": 0,
+  "allow_import": 1,
+  "autoname": "hash",
+  "creation": "2025-10-23 13:01:35.706026",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "employee",
+    "log_type",
+    "log_time",
+    "source",
+    "device_id",
+    "ip",
+    "gps_lat",
+    "gps_lon",
+    "site"
+  ],
+  "fields": [
+    {
+      "fieldname": "employee",
+      "label": "Employee",
+      "fieldtype": "Link",
+      "options": "Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "log_type",
+      "label": "Log Type",
+      "fieldtype": "Select",
+      "options": "IN\nOUT",
+      "reqd": 1
+    },
+    {
+      "fieldname": "log_time",
+      "label": "Log Time",
+      "fieldtype": "Datetime",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source",
+      "label": "Source",
+      "fieldtype": "Select",
+      "options": "Web\nMobile\nKiosk\nAPI"
+    },
+    {
+      "fieldname": "device_id",
+      "label": "Device ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "ip",
+      "label": "IP Address",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "gps_lat",
+      "label": "GPS Latitude",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "gps_lon",
+      "label": "GPS Longitude",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "site",
+      "label": "Site/Location",
+      "fieldtype": "Link",
+      "options": "Location"
+    }
+  ],
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "max_attachments": 0,
+  "modified": "2025-10-23 13:01:35.706049",
+  "module": "AlphaX Time",
+  "name": "AX Checkin",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "HR Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Employee",
+      "read": 1
+    }
+  ],
+  "quick_entry": 1,
+  "read_only": 0,
+  "read_only_onload": 0,
+  "track_changes": 1
+}

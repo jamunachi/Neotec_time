@@ -1,0 +1,95 @@
+{
+  "actions": [],
+  "allow_copy": 0,
+  "allow_events_in_timeline": 0,
+  "allow_import": 1,
+  "autoname": "hash",
+  "creation": "2025-10-23 13:01:35.708666",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "employee",
+    "period_from",
+    "period_to",
+    "weekday_minutes",
+    "weekend_minutes",
+    "holiday_minutes",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "employee",
+      "label": "Employee",
+      "fieldtype": "Link",
+      "options": "Employee",
+      "reqd": 1
+    },
+    {
+      "fieldname": "period_from",
+      "label": "Period From",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "period_to",
+      "label": "Period To",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "weekday_minutes",
+      "label": "Weekday Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "weekend_minutes",
+      "label": "Weekend Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "holiday_minutes",
+      "label": "Holiday Minutes",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nSubmitted\nApproved\nRejected",
+      "default": "Draft"
+    }
+  ],
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "max_attachments": 0,
+  "modified": "2025-10-23 13:01:35.708691",
+  "module": "AlphaX Time",
+  "name": "Overtime Statement",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "HR Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Employee",
+      "read": 1
+    }
+  ],
+  "quick_entry": 1,
+  "read_only": 0,
+  "read_only_onload": 0,
+  "track_changes": 1
+}
