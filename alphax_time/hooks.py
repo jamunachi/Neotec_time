@@ -17,6 +17,7 @@ fixtures = [
 ]
 
 
+
 # DocType Events / Scheduler
 scheduler_events = {
     "hourly": [
