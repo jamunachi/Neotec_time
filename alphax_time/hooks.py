@@ -13,8 +13,9 @@ app_include_css = []
 
 # Fixtures: workspace (basic)
 fixtures = [
-    {"dt": "Workspace", "filters": [["label","=","AlphaX Time"]]}
+    {"dt": "Workspace", "filters": [["label", "=", "AlphaX Time"]]}
 ]
+
 
 # DocType Events / Scheduler
 scheduler_events = {
