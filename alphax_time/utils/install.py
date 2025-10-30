@@ -1,22 +1,25 @@
-# apps/alphax_time/alphax_time/utils/install.py
 import frappe
 
 def after_install():
-    # Some versions key Workspaces by label; be safe and check both fields
-    exists = frappe.db.exists("Workspace", {"label": "AlphaX Time"}) or \
-             frappe.db.exists("Workspace", {"title": "AlphaX Time"})
-    if not exists:
-        frappe.get_doc({
-            "doctype": "Workspace",
-            # IMPORTANT for autoname
-            "label": "AlphaX Time",
-            # Good to also set title for UI
-            "title": "AlphaX Time",
-            "public": 1,
-            "is_hidden": 0,
-            "sequence_id": 0,
-            # Workspace expects JSON string for content
-            "content": "[]"
-            # Optional niceties:
-            # "module": "HR"  # or a module you prefer
-        }).insert(ignore_permissions=True)
+    # consider any of these as "exists" to be safe across versions
+    exists = (
+        frappe.db.exists("Workspace", {"name": "AlphaX Time"})
+        or frappe.db.exists("Workspace", {"label": "AlphaX Time"})
+        or frappe.db.exists("Workspace", {"title": "AlphaX Time"})
+    )
+    if exists:
+        return
+
+    # Set ALL three: name, label, title
+    doc = frappe.get_doc({
+        "doctype": "Workspace",
+        "name": "AlphaX Time",      # bypasses autoname
+        "label": "AlphaX Time",     # required because autoname is field:label
+        "title": "AlphaX Time",     # shown in UI
+        "public": 1,
+        "is_hidden": 0,
+        "sequence_id": 0,
+        "content": "[]",            # JSON string, not a list
+        # optional: "module": "HR"
+    })
+    doc.insert(ignore_permissions=True)
