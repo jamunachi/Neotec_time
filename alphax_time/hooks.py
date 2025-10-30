@@ -13,7 +13,8 @@ app_include_css = []
 
 # Fixtures: workspace (basic)
 fixtures = [
-    {"dt": "Workspace", "filters": [["label", "=", "AlphaX Time"]]}
+    # remove the Workspace fixture to avoid duplicate/ordering issues for now
+    # {"dt": "Workspace", "filters": [["label", "=", "AlphaX Time"]]}
 ]
 
 
