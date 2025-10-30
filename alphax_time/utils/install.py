@@ -2,16 +2,21 @@
 import frappe
 
 def after_install():
-    # Prefer checking by title (current field used in Workspace UI)
-    exists = frappe.db.exists("Workspace", {"title": "AlphaX Time"})
+    # Some versions key Workspaces by label; be safe and check both fields
+    exists = frappe.db.exists("Workspace", {"label": "AlphaX Time"}) or \
+             frappe.db.exists("Workspace", {"title": "AlphaX Time"})
     if not exists:
         frappe.get_doc({
             "doctype": "Workspace",
-            "title": "AlphaX Time",   # REQUIRED
+            # IMPORTANT for autoname
+            "label": "AlphaX Time",
+            # Good to also set title for UI
+            "title": "AlphaX Time",
             "public": 1,
             "is_hidden": 0,
             "sequence_id": 0,
-            "content": "[]",          # store JSON as string, e.g., "[]"
-            # Optional but harmless (helps organization in the Desk):
-            # "module": "HR",  # or any module name you prefer
+            # Workspace expects JSON string for content
+            "content": "[]"
+            # Optional niceties:
+            # "module": "HR"  # or a module you prefer
         }).insert(ignore_permissions=True)
